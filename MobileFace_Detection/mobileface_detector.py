@@ -68,7 +68,7 @@ class MobileFaceDetection():
         tic = time.time()
         result =  self.net(x)
         toc = time.time() - tic
-        print('Inference time: %fms' % (toc*1000))
+        #print('Inference time: %fms' % (toc*1000))
         ids, scores, bboxes = [xx[0].asnumpy() for xx in result]
 
         h, w, c = image_mat.shape
